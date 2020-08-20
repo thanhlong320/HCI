@@ -178,6 +178,11 @@ $(document).ready(function() {
 		pos_body_before = pos_body_after;
 	});
 
+	$('.one_slide').on('click',function(event) {
+		var index = $(this).index();
+		console.log(index);
+		$('html, body').animate({scrollTop:ALL_pos[index+1]}, {duration: 1000, easing:"linear"});
+	});
 
 
 	$('.backtotop').on('click', function(event) {
